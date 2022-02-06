@@ -1,12 +1,12 @@
 package com.jj.livedatacalladapterfactory.data
 
-import androidx.lifecycle.LiveData
 import com.android.example.paging.pagingwithnetwork.reddit.api.TestApi
 import com.jj.calladapter.ApiResponse
+import com.jj.calladapter.RetrofitLiveData
 
 class MainRepository {
 
-    fun getTest(): LiveData<ApiResponse<TestApi.MyResponse>> {
+    fun getTest(): RetrofitLiveData<ApiResponse<TestApi.MyResponse>> {
         return TestApi.create().getTest()
     }
 

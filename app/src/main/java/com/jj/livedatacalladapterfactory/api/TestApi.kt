@@ -17,9 +17,9 @@
 package com.android.example.paging.pagingwithnetwork.reddit.api
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import com.jj.calladapter.ApiResponse
 import com.jj.calladapter.LiveDataCallAdapterFactory
+import com.jj.calladapter.RetrofitLiveData
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -33,7 +33,7 @@ import retrofit2.http.GET
 interface TestApi {
 
     @GET("app/pad/getTodayTasksByAccountId?accountId=31588&padMachineId=7013T1100144F")
-    fun getTest(): LiveData<ApiResponse<MyResponse>>
+    fun getTest(): RetrofitLiveData<ApiResponse<MyResponse>>
 
     class MyResponse(val code: String) {
         override fun toString(): String {

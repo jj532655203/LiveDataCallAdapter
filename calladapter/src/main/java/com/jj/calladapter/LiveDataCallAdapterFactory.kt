@@ -12,7 +12,8 @@ class LiveDataCallAdapterFactory : CallAdapter.Factory() {
         annotations: Array<Annotation>,
         retrofit: Retrofit
     ): CallAdapter<*, *>? {
-        if (getRawType(returnType) != LiveData::class.java) {
+        if (getRawType(returnType) != LiveData::class.java
+            && getRawType(returnType) != RetrofitLiveData::class.java) {
             return null
         }
         val observableType = getParameterUpperBound(0, returnType as ParameterizedType)
