@@ -7,7 +7,6 @@ group = 'com.github.jj532655203'
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "31.0.0"
 
     defaultConfig {
         minSdkVersion 21
