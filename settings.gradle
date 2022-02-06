@@ -1,0 +1,3 @@
+rootProject.name = "LiveDataCallAdapterFactory"
+include ':app'
+include ':calladapter'
