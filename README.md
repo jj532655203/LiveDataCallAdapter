@@ -3,6 +3,14 @@ based on retrofit, the LiveData returned by the restfull api, can be used to man
 （配合retrofit使用，让网络请求返回的livedata可以手动重新发起网络请求）
 
 ## use like that:
+### 0
+root build.gradle: 
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+app build.gradle: 
+implementation 'com.github.jj532655203:LiveDataCallAdapter:1.0.0-beta.2'
 
 ### 1
     companion object {
